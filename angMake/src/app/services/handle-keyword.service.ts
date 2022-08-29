@@ -14,7 +14,7 @@ export class HandleKeywordService {
     const stringData = new FormData();
     stringData.append("title", stringCheck);
 
-    // return this.http.post('http://localhost:3200/api/keywords/', stringData)
+    // return this.http.post('http://localhost:3200/api/keywords/', stringData) --for local
     return this.http.post('api/keywords/', stringData)
 
   }
