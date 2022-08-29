@@ -5,19 +5,28 @@ import numpy as np
 import re
 import pandas as pd
 import yake
-# importing pandas module
+import os
 
+
+# importing pandas module
+# # get current working directory
+# cwd = os.getcwd()
+# # get files in directory
+# files = os.listdir(cwd)
+# print(files)
+# __location__ = os.path.realpath(
+    # os.path.join(os.getcwd(), os.path.dirname(__file__)))
 # filepath = r"C:\Users\MukulMishra\Desktop\aptyproductflow\searchHouse\archive\synonyms.csv"
 # filepath = r"https://s3.us-west-2.amazonaws.com/farm1.mukul/diction/synonyms.csv"
-filepath = r"./synonyms.csv"
-
+filepath = r"synonyms.csv"
+# filepath = open(os.path.join(__location__, 'synonyms.csv'))
 df = pd.read_csv(filepath)
-#text = "How to file Delegation Request."
 
 # Get the command line arguments
 # and parse it to json
 
-#hardcoded-> text = "Write your text here"
+# hardcoded-> 
+# text = "Write your text here"
 text = sys.argv[1]
 
 
@@ -55,6 +64,5 @@ resp = {
     "Message": "Accessing Python MAKE Lib ~ mukul.tsw",
     "Unique Keywords": data
 }
-
 print(json.dumps(resp))
 sys.stdout.flush()

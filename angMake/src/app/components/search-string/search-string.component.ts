@@ -67,12 +67,12 @@ export class SearchStringComponent implements OnInit {
       this.Makekeywords = gotKeywords.MAKEkeywords
       console.log('keywords :', this.Makekeywords)
       console.log('ln', this.Makekeywords.length)
+      this.keywordsNotFound = false
       if (!this.Makekeywords.length) {
         this.keywordsNotFound = true
         console.log('Cant Find', this.Makekeywords.length)
       }
       this.keywordsLoading = false
-
     })
   }
 }

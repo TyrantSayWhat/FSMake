@@ -52,10 +52,6 @@ router.post('', parseUploadListing.any(), (request, response, next) => {
     catch (err) {
         next(err)
     }
-
-
-
-
 });
 
 
